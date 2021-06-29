@@ -222,3 +222,16 @@
   {% endif %}
 
 {% endmacro %}
+
+
+{% macro snowflake_dml_explicit_transaction(dml) %}
+  
+  {% set dml_transaction %}
+    begin;
+    {{ dml }} {{ ";" if not (dml | trim).endswith(";") }}
+    commit;
+  {% endset %}
+  
+  {% do return(dml_transaction) %}
+
+{% endmacro %}

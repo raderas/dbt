@@ -258,7 +258,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=False, database='test_database',
                 role=None, schema='public', user='test_user',
                 warehouse='test_warehouse', private_key=None, application='dbt')
@@ -274,7 +274,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=True, database='test_database',
                 role=None, schema='public', user='test_user',
                 warehouse='test_warehouse', private_key=None, application='dbt')
@@ -291,7 +291,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=False, database='test_database',
                 password='test_password', role=None, schema='public',
                 user='test_user', warehouse='test_warehouse', private_key=None,
@@ -310,7 +310,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=False, database='test_database',
                 password='test_password', role=None, schema='public',
                 user='test_user', warehouse='test_warehouse',
@@ -329,7 +329,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=False, database='test_database',
                 role=None, schema='public', user='test_user',
                 warehouse='test_warehouse', authenticator='externalbrowser',
@@ -348,7 +348,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=False, database='test_database',
                 role=None, schema='public', user='test_user',
                 warehouse='test_warehouse', authenticator='oauth', token='my-oauth-token',
@@ -369,7 +369,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=False, database='test_database',
                 role=None, schema='public', user='test_user',
                 warehouse='test_warehouse', private_key='test_key',
@@ -390,7 +390,7 @@ class TestSnowflakeAdapter(unittest.TestCase):
         conn.handle
         self.snowflake.assert_has_calls([
             mock.call(
-                account='test_account', autocommit=False,
+                account='test_account', autocommit=True,
                 client_session_keep_alive=False, database='test_database',
                 role=None, schema='public', user='test_user',
                 warehouse='test_warehouse', private_key='test_key',
