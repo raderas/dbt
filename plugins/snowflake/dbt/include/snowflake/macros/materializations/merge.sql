@@ -18,7 +18,7 @@
         (
             select {{ dest_cols_csv }}
             from {{ source_sql }}
-        );
+        )
 
     {%- else -%}
 
