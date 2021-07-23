@@ -45,6 +45,7 @@ DEBUG_LOG_FORMAT = (
 
 SECRET_ENV_PREFIX = 'DBT_ENV_SECRET_'
 
+
 def get_secret_env() -> List[str]:
     return [
         v for k, v in os.environ.items()
