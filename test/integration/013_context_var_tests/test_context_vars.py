@@ -148,7 +148,6 @@ class TestContextVars(DBTIntegrationTest):
         self.assertFalse("secret_variable" in log_output)
         self.assertTrue("regular_variable" in log_output)
 
-
 class TestEmitWarning(DBTIntegrationTest):
     @property
     def schema(self):
