@@ -230,11 +230,11 @@
     statements before passing them into run_query(), or calling in the 'main' statement
     of a materialization
   #}
-  {% set dml_transaction %}
+  {% set dml_transaction -%}
     begin;
     {{ dml }};
     commit;
-  {% endset %}
+  {%- endset %}
   
   {% do return(dml_transaction) %}
 
