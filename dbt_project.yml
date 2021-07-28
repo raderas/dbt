@@ -1,1 +1,4 @@
 
+# Example dbt_project.yml file
+name: 'hodinkee_challenge'
+profile: 'hodinkee_challenge'
