@@ -1,4 +1,19 @@
 
 # Example dbt_project.yml file
-name: 'hodinkee_challenge'
-profile: 'hodinkee_challenge'
+name: hodinkee_challenge
+
+config-version : 2
+version: 1.0.0
+
+profile: hodinkee_challenge
+
+query-comment: "executed by dbt"
+
+models:
+  #namespace
+  hodinkee_challenge:
+    
+    info:
+      +enabled: true
+      +materialized: table
+
