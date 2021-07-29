@@ -1,0 +1,16 @@
+  
+# profiles.yml file
+hodinkee_challenge:
+  target : dev
+  outputs:
+    dev:
+      type: postgres
+      host: 35.226.50.189
+      user: postgres
+      password: df030185
+      port: 5432
+      dbname: hodinkee
+      schema: public
+      threads: 1
+      keepalives_idle: 0
+      
