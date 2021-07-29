@@ -1,0 +1,7 @@
+# profiles.yml file
+hodinkee_challenge:
+  target : dev
+  outputs:
+    dev:
+      type: mysql
+      host: 
